@@ -1,6 +1,6 @@
 {
   "name": "lang-gdscript",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "GDScript (Godot Scripting Language) grammar for atom.io.",
   "keywords": [
     "gdscript",
