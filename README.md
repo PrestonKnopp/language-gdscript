@@ -1,4 +1,4 @@
-# language-gdscript package
+# lang-gdscript package
 
 GDScript (Godot Scripting Language) grammar for atom.io.
 
@@ -12,7 +12,5 @@ Just syntax highlighting. Autocompletion will come soon.
 
 ### Install
 
-- `apm install language-gdscript`
+- `apm install lang-gdscript`
 - or from atom > settings > install
-
-
