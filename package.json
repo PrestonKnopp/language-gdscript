@@ -1,10 +1,12 @@
 {
   "name": "language-gdscript",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "GDScript (Godot Scripting Language) grammar for atom.io.",
   "keywords": [
+      "gdscript",
+      "godot"
   ],
-  "repository": "https://github.com/atom/language-gdscript",
+  "repository": "https://github.com/IndicaInkwell/language-gdscript.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
