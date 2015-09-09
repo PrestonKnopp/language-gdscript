@@ -1,0 +1,53 @@
+".source.gdscript":
+  class:
+    prefix: "class"
+    body: "class ${1:ClassName}:${2}"
+  elif:
+    prefix: "elif"
+    body: '''
+      elif ${1:compare}:
+      	${2}
+      
+    '''
+  else:
+    prefix: "else"
+    body: '''
+      else:
+      	${1}
+      
+    '''
+  for:
+    prefix: "for"
+    body: '''
+      for ${1:i} in ${2:range_or_array}:
+      	${3}
+      
+    '''
+  func:
+    prefix: "func"
+    body: '''
+      func ${1:method}(${2:args}):
+      	${3}
+      
+    '''
+  if:
+    prefix: "if"
+    body: '''
+      if ${1:compare}:
+      	${2}
+      
+    '''
+  if_in:
+    prefix: "if"
+    body: '''
+      if ${1:a} in ${2:array}:
+      	${3}
+      
+    '''
+  while:
+    prefix: "while"
+    body: '''
+      while(${1:compare}):
+      	${2}
+      
+    '''
