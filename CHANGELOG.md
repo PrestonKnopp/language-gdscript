@@ -1,3 +1,5 @@
+## 2.0.0 - Second Release
+* Added autocomplete support!
+
 ## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+* Converted sublime text language plugin to atom

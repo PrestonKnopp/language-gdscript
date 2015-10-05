@@ -4,11 +4,10 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 Converted from the sublime text grammar: https://github.com/beefsack/GDScript-sublime
 
-A textmate version was created in the conversion process. I haven't tried it though.
+### Features
 
-### Currently
-
-Just syntax highlighting. Autocompletion will come soon.
+- Syntax highlighting
+- ~~Autocompletion will come soon.~~ Autocompletion is now supported!
 
 ### Install
 
