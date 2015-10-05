@@ -13,3 +13,11 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 
 - `apm install lang-gdscript`
 - or from atom > settings > install
+
+
+### TODOS
+
+- Fix Comments
+- Remove Duplicates
+- Reduce Precedence
+- Turn Off Exclude Lower Precedenc
