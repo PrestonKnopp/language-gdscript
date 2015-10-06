@@ -17,7 +17,7 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 
 ### TODOS
 
-- Fix Comments
-- Remove Duplicates
-- Reduce Precedence
-- Turn Off Exclude Lower Precedenc
+- [DONE] Fix Comments
+- [DONE] ~~Remove~~ Reduce Duplicates
+- [DONE] Reduce Precedence
+- [DONE] Turn Off Exclude Lower Precedenc
