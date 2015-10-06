@@ -1,0 +1,3 @@
+'.source.gdscript':
+    'editor':
+        'commentStart': '# '
