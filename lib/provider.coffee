@@ -9,8 +9,8 @@ module.exports =
         selector: '.source.gdscript'
         disableForSelector: '.punctuation.definition.comment.gdscript, .string.quoted.single.gdscript, .string.quoted.double.gdscript'
 
-        inclusionPriority: 2
-        excludeLowerPriority: true
+        inclusionPriority: 1
+#        excludeLowerPriority: true
 
         loadCompletions: ->
             allCompletions = JSON.parse readFileSync(path.resolve(__dirname, '..', 'snippets', 'gdscript-completions.json'))
