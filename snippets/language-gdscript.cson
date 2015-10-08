@@ -1,7 +1,16 @@
 ".source.gdscript":
+  clasex:
+      prefix: "clex"
+      body: '''
+        class ${1:ClassName} extends ${2:OtherClass}:
+            ${3}
+      '''
   class:
     prefix: "class"
-    body: "class ${1:ClassName}:${2}"
+    body: '''
+      class ${1:ClassName}:
+          ${2}
+    '''
   elif:
     prefix: "elif"
     body: '''
