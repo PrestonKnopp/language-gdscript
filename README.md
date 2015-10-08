@@ -21,5 +21,7 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] ~~Remove~~ Reduce Duplicates
 - [DONE] Reduce Precedence
 - [DONE] Turn Off Exclude Lower Precedenc
-- [    ] Add Classes to completions (totally forgot)
-- [    ] Have method completions show when proceeding a . 
+- [DONE] Add Classes to completions (totally forgot)
+- [DONE] Add class extends snippet (as clex)
+- [DONE] Disable .variable.other.gdscript
+- [DONE] Add scope of class/method/constant/signal to right label
