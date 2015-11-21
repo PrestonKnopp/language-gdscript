@@ -47,5 +47,9 @@ module.exports =
                             co.replacementPrefix = prefix
                             completions.push co
 
+
+                for completion in completions
+                    if completion.displayText is 'length'
+                        console.log completion
                 # console.timeEnd 'a'
                 resolve(completions)
