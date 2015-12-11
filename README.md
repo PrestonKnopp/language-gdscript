@@ -9,13 +9,16 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 ### Features
 
 - Syntax highlighting
-- ~~Autocompletion will come soon.~~ Autocompletion is now supported!
+- Autocompletion! (using autocomplete+)
 
 ### Install
 
 - `apm install lang-gdscript`
 - or from atom > settings > install
 
+### Hopes and Dreams
+
+- Would be cool to have some ide like features other then just basic string matched autocompletion. If anyone has any pointers or contributions on where to begin for gdscript that would be awesome! For example, (I haven't checked in a while) but I believe godot binary provides a way to compile gdscript via command line. I wonder if there is like a syntax analysis or dump-ast option.
 
 ### TODOS
 
@@ -28,4 +31,4 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] Disable .variable.other.gdscript
 - [DONE] Add scope of class/method/constant/signal to right label
 - [] follow grammar guidelines more strictly
-- [] correct some of the entities won't highlight individual pieces (typing `class` won't highlight until you have `class Name:`)
+- [] correct some of the entities that won't highlight individual pieces (typing `class` won't highlight until you have `class Name:`)
