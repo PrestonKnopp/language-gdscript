@@ -1,5 +1,7 @@
 # lang-gdscript package
 
+[](https://github.com/IndicaInkwell/language-gdscript/blob/master/lang-gdscript-demo.png)
+
 GDScript (Godot Scripting Language) grammar for atom.io.
 
 Converted from the sublime text grammar: https://github.com/beefsack/GDScript-sublime
