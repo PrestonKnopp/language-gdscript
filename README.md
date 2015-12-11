@@ -1,6 +1,6 @@
 # lang-gdscript package
 
-![](https://github.com/IndicaInkwell/language-gdscript/blob/master/lang-gdscript-demo.png)
+![](https://raw.githubusercontent.com/IndicaInkwell/language-gdscript/master/lang-gdscript-demo.png)
 
 GDScript (Godot Scripting Language) grammar for atom.io.
 
