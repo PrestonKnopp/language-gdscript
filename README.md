@@ -25,3 +25,4 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] Add class extends snippet (as clex)
 - [DONE] Disable .variable.other.gdscript
 - [DONE] Add scope of class/method/constant/signal to right label
+- [] follow grammar guidelines more strictly
