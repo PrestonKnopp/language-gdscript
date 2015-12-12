@@ -16,10 +16,6 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - `apm install lang-gdscript`
 - or from atom > settings > install
 
-### Hopes and Dreams
-
-- Would be cool to have some ide like features other then just basic string matched autocompletion. If anyone has any pointers or contributions on where to begin for gdscript that would be awesome! For example, (I haven't checked in a while) but I believe godot binary provides a way to compile gdscript via command line. I wonder if there is like a syntax analysis or dump-ast option.
-
 ### TODOS
 
 - [DONE] Fix Comments
