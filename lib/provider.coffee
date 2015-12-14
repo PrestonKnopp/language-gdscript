@@ -10,6 +10,7 @@ module.exports =
         disableForSelector: '.punctuation.definition.comment.gdscript, .string.quoted.single.gdscript, .string.quoted.double.gdscript, .variable.parameter.gdscript, .variable.other.gdscript'
 
         inclusionPriority: 1
+        enabled: true
 #        excludeLowerPriority: true
 
         loadCompletions: ->
@@ -18,7 +19,20 @@ module.exports =
             @completions = allCompletions.completions
             @constantCompletions = allCompletions.constants
 
+        clearCompletions: ->
+            @globalCompletions = null
+            @completions = null
+            @constantCompletions = null
+
         getSuggestions: ({editor, bufferPosition, scopeDescriptor, prefix}) ->
+            if atom.config.get('lang-gdscript.disableBasicCompletions')
+                @enabled = false
+                @clearCompletions()
+                return null
+            else if not @enabled
+                @enabled = true
+                @loadCompletions()
+
             self = this
             new Promise (resolve) ->
                 # console.time('a')

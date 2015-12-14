@@ -1,6 +1,11 @@
 provider = require './provider'
 
 module.exports =
-  activate: -> provider.loadCompletions()
+  config:
+    disableBasicCompletions:
+      type: 'boolean'
+      default: false
+  activate: ->
+    provider.loadCompletions() unless atom.config.get('lang-gdscript.disableBasicCompletions')
 
   getProvider: -> provider
