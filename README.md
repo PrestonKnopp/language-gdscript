@@ -11,6 +11,9 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - Syntax highlighting
 - Autocompletion! (using autocomplete+)
 
+### Hopes and Dreams
+- Would be cool to have some ide like features other then just basic string matched autocompletion. If anyone has any pointers or contributions on where to begin for gdscript that would be awesome! For example, (I haven't checked in a while) but I believe godot binary provides a way to compile gdscript via command line. I wonder if there is like a syntax analysis or dump-ast option.
+
 ### Install
 
 - `apm install lang-gdscript`
