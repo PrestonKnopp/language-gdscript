@@ -1,3 +1,6 @@
+## 2.4.0 - Minor
+* Added ability to disable the completions
+
 ## 2.3.0 - Minor
 * Updated grammar
     * highlights more like it's supposed to now
