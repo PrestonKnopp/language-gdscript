@@ -21,11 +21,11 @@ patterns: [
     name: "punctuation.definition.comment.gdscript"
   }
   {
-    match: "\\b(?i:elif|else|for|if|while|break|continue|pass|return|onready|breakpoint)\\b"
-    name: "keyword.control.flow.gdscript"
+    match: "\\b(?i:elif|else|for|if|while|break|continue|pass|and|in|is|not|or|return|onready|breakpoint)\\b"
+    name: "keyword.control.gdscript"
   }
   {
-    match: "\\b(?i:&&|and|in|is|!|not|\\|\\||or)\\b"
+    match: "\\b(&&|!|\\|\\|)\\b"
     name: "keyword.operator.logical.gdscript"
   }
   {
@@ -41,7 +41,7 @@ patterns: [
     name: "keyword.operator.assignment.gdscript"
   }
   {
-    match: "\\b(?i:extends|assert)\\b"
+    match: "\\b(?i:class|extends|assert)\\b"
     name: "keyword.other.gdscript"
   }
   {
@@ -60,6 +60,18 @@ patterns: [
     match: "\\bvar\\b"
     name: "storage.type.var.gdscript"
   }
+  { # Standard functions
+    match: '(?<![^.]\\.|:)\\b(print|set_\\w+|get_\\w+)\\b(?=(\\()([^)]*)(\\)))'
+    name: 'support.function.library.gdscript'
+  }
+  { # Function call
+    match: '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[(]))'
+    name: 'support.function.any-method.gdscript'
+  }
+  { # Object property
+    match: '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?![(])'
+    name: 'variable.other.gdscript'
+  }
 
 #------------------------------------------
   #  Captures
@@ -68,10 +80,8 @@ patterns: [
   {
     captures:
       "1":
-        name: "storage.type.class.gdscript"
-      "2":
         name: "entity.name.type.class.gdscript"
-    match: "^\\s*(?i:(class))\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\s*:"
+    match: "(?<=^class)\\s+([a-zA-Z_]\\w*)\\s*(?=:)"
   }
   {
     captures:
@@ -87,7 +97,7 @@ patterns: [
         name: "entity.name.type.instance"
       "2":
         name: "keyword.operator.new"
-    match: "\\b(\\w+)(?i:\\.)(new)"
+    match: "\\b(\\w+)(\\.)(new)"
   }
 
 #------------------------------------------
@@ -95,7 +105,7 @@ patterns: [
 #------------------------------------------
 
   {
-    begin: "^\\s*(?i:(func))\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\s*\\("
+    begin: "^\\s*(?i:(func))\\s+([a-zA-Z_]\\w*)\\s*\\("
     beginCaptures:
       "1":
         name: "storage.type.function.gdscript"
@@ -110,11 +120,11 @@ patterns: [
     ]
   }
   {
-    begin: "[.]([\\w][a-zA-Z_0-9]*)\\s*\\("
+    begin: "[.]([\\w]\\w*)\\s*\\("
     # Makes method names blue
-    # beginCaptures:
-    #   "1":
-    #     name: "entity.name.function.gdscript"
+    beginCaptures:
+       "1":
+         name: "entity.name.function.gdscript"
     end: "\\)"
     patterns: [
       {

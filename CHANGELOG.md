@@ -1,3 +1,14 @@
+## 2.6.0 - Major
+* Fixed keywords `and`, `in`, `is`, `not` and `or` not being highlighted (classes "keyword" and "operator" don't mix)
+* Fixed `class` not being highlighted properly
+* Added highlighting to functions, methods and properties
+* Added highlighting to select few standard functions (print, set_*, get_*). Does not work with methods yet.
+* Now indents whenever a line of code ends with `:` (i.e. after declaring a function or a class)
+
+## 2.5.0 - Minor
+* Added keywords `onready` and `breakpoint`
+* Removed debug statements
+
 ## 2.4.0 - Minor
 * Added ability to disable the completions
 
