@@ -21,10 +21,11 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] Fix Comments
 - [DONE] ~~Remove~~ Reduce Duplicates
 - [DONE] Reduce Precedence
-- [DONE] Turn Off Exclude Lower Precedenc
+- [DONE] Turn Off Exclude Lower Precedence
 - [DONE] Add Classes to completions (totally forgot)
 - [DONE] Add class extends snippet (as clex)
 - [DONE] Disable .variable.other.gdscript
 - [DONE] Add scope of class/method/constant/signal to right label
+- [DONE] Correct some of the entities that won't highlight individual pieces (typing `class` won't highlight until you have `class Name:`)
+- [] add the other support functions (this is going give a long, *long* list)
 - [] follow grammar guidelines more strictly
-- [] correct some of the entities that won't highlight individual pieces (typing `class` won't highlight until you have `class Name:`)
