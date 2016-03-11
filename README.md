@@ -27,5 +27,6 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] Disable .variable.other.gdscript
 - [DONE] Add scope of class/method/constant/signal to right label
 - [DONE] Correct some of the entities that won't highlight individual pieces (typing `class` won't highlight until you have `class Name:`)
-- [] add the other support functions (this is going give a long, *long* list)
+- [DONE] add the other support functions (this is going give a long, *long* list)
+- [DONE] fix support for [goto](https://atom.io/packages/goto) package (symbol generator)
 - [] follow grammar guidelines more strictly

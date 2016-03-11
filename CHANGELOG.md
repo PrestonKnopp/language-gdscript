@@ -1,3 +1,8 @@
+## 2.7.0 - Minor
+* Added support functions with support.function class
+* Removed unneccessary entity.name.function  
+  * Fixed support for the [goto](https://atom.io/packages/goto) package.
+
 ## 2.6.0 - Major
 * Fixed keywords `and`, `in`, `is`, `not` and `or` not being highlighted (classes "keyword" and "operator" don't mix)
 * Fixed `class` not being highlighted properly
