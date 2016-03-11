@@ -123,32 +123,6 @@ patterns: [
       }
     ]
   }
-  {
-    begin: "[.]([\\w]\\w*)\\s*\\("
-    # Makes method names blue
-    beginCaptures:
-       "1":
-         name: "entity.name.function.gdscript"
-    end: "\\)"
-    patterns: [
-      {
-        include: "#self"
-      }
-      {
-        include: "#strings"
-      }
-      {
-        include: "#numbers"
-      }
-      {
-        include: "#const_vars"
-      }
-      {
-        match: "([a-zA-Z_][a-zA-Z_0-9]+)"
-        name: "variable.parameter.gdscript"
-      }
-    ]
-  }
 ]
 
 #------------------------------------------
