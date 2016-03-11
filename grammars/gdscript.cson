@@ -60,6 +60,10 @@ patterns: [
     match: "\\bvar\\b"
     name: "storage.type.var.gdscript"
   }
+  { # support functions
+    match: '(?<![^.]\\.|:)\\b(sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|sqrt|fmod|fposmod|floor|ceil|round|abs|sign|pow|log|exp|isnan|isinf|ease|decimals|stepify|lerp|dectime|randomize|randi|randf|rand_range|seed|rand_seed|deg2rad|rad2deg|linear2db|db2linear|max|min|clamp|nearest_po2|weakref|funcref|convert|typeof|str|print|printt|prints|printerr|printraw|var2str|str2var|var2bytes|bytes2var|range|load|inst2dict|dict2inst|hash|Color8|print_stack|instance_from_id|preload|yield|assert)\\b(?=(\\()([^)]*)(\\)))'
+    name: 'support.function.gdscript'
+  }
   { # Standard functions
     match: '(?<![^.]\\.|:)\\b(print|set_\\w+|get_\\w+)\\b(?=(\\()([^)]*)(\\)))'
     name: 'support.function.library.gdscript'
