@@ -2,7 +2,8 @@
   clasex:
       prefix: "clex"
       body: '''
-        class ${1:ClassName} extends ${2:OtherClass}:
+        class ${1:ClassName}:
+            extends ${2:OtherClass}
             ${3}
       '''
   class:
