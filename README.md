@@ -10,6 +10,7 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 
 - Syntax highlighting
 - Autocompletion! (using autocomplete+). Will be obsolete! Check out: [atom-autocomplete-gdscript](https://atom.io/packages/autocomplete-gdscript) by [neikeq](https://github.com/neikeq/atom-autocomplete-gdscript)
+- Symbol generation with [goto](https://atom.io/packages/goto) package
 
 ### Install
 
