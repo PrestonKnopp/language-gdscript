@@ -7,7 +7,7 @@ module.exports =
         globalCompletions: null
         constantCompletions: null
         selector: '.source.gdscript'
-        disableForSelector: '.punctuation.definition.comment.gdscript, .string.quoted.single.gdscript, .string.quoted.double.gdscript, .variable.parameter.gdscript, .variable.other.gdscript'
+        disableForSelector: '.punctuation.definition.comment.gdscript, .string.quoted.single.gdscript, .string.quoted.double.gdscript, .variable.parameter.gdscript, .variable.other.gdscript, .variable.parameter.function.gdscript, .punctuation.definition.parameters.comma.gdscript, .punctuation.definition.parameters.space.gdscript, .punctuation.definition.parameters.begin.bracket.round.gdscript, .punctuation.definition.parameters.end.bracket.round.gdscript'
 
         inclusionPriority: 1
         enabled: true
