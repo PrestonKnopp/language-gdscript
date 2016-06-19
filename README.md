@@ -31,3 +31,5 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [DONE] add the other support functions (this is going give a long, *long* list)
 - [DONE] fix support for [goto](https://atom.io/packages/goto) package (symbol generator)
 - [] follow grammar guidelines more strictly
+- [] add better completions using the base class
+- [] update docs
