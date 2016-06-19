@@ -74,7 +74,7 @@ patterns: [
   }
   { # Object property
     match: '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?![(])'
-    name: 'variable.other.function.gdscript'
+    name: 'variable.other.property.gdscript'
   }
 
 #------------------------------------------
