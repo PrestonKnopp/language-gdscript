@@ -53,7 +53,7 @@ patterns: [
     name: "constant.language.gdscript"
   }
   {
-    match: "\\b(?i:static|export|tool|yield)\\b"
+    match: "\\b(?i:export|tool|yield)\\b"
     name: "storage.modifier.static.gdscript"
   }
   {
@@ -109,13 +109,16 @@ patterns: [
 #------------------------------------------
 
   {
-    begin: "^\\s*(?i:(func))\\s+([a-zA-Z_]\\w*)\\s*(\\()"
+		# matches optionally static method up to opening paran
+    begin: "^\\s*(static)?\\s*(func)\\s+([a-zA-Z_]\\w*)\s*(\\()"
     beginCaptures:
       "1":
-        name: "storage.type.function.gdscript"
+        name: "storage.modifier.static.gdscript"
       "2":
-        name: "entity.name.function.gdscript"
+        name: "storage.type.function.gdscript"
       "3":
+        name: "entity.name.function.gdscript"
+      "4":
         name: "punctuation.definition.parameters.begin.bracket.round.gdscript"
     end: "(\\))\\s*:"
     endCaptures:
