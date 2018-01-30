@@ -33,3 +33,4 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - [] follow grammar guidelines more strictly
 - [] add better completions using the base class
 - [] update docs
+- [] have setget be a capture group instead of match to highlight when used syntactically correct

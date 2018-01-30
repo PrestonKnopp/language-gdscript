@@ -41,7 +41,7 @@ patterns: [
     name: "keyword.operator.assignment.gdscript"
   }
   {
-    match: "\\b(?i:class|extends|assert|signal)\\b"
+    match: "\\b(?i:class|extends|assert|signal|setget)\\b"
     name: "keyword.other.gdscript"
   }
   {
