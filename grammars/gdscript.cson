@@ -109,8 +109,8 @@ patterns: [
 #------------------------------------------
 
   {
-		# matches optionally static method up to opening paran
-    begin: "^\\s*(static)?\\s*(func)\\s+([a-zA-Z_]\\w*)\s*(\\()"
+    # matches optionally static, master, sync, or slave method up to opening paran
+    begin: "^\\s*(static|master|sync|slave)?\\s*(func)\\s+([a-zA-Z_]\\w*)\s*(\\()"
     beginCaptures:
       "1":
         name: "storage.modifier.static.gdscript"
@@ -139,7 +139,38 @@ patterns: [
       }
     ]
   }
-]
+
+  {
+    # Match both named and anonymous enum with its body
+    begin: '^\\s*(enum)\\s+(\\w+)?'
+    beginCaptures:
+      "1":
+        name: 'storage.modifier.gdscript'
+      "2":
+        name: 'entity.name.type.enum.gdscript'
+    end: '}'
+    endCaptures:
+      "0":
+        name: 'punctuation.section.enum.end.bracket.curly.gdscript'
+    name: 'meta.enum.gdscript'
+    patterns: [
+      {
+        begin: '{'
+        beginCaptures:
+          "0":
+            name: 'punctuation.section.enum.begin.bracket.curly.gdscript'
+        end: '(?=})'
+        patterns: [
+          {
+            match: '\\w+'
+            name: 'constant.other.enum.gdscript'
+          }
+        ]
+      }
+    ]
+  }
+
+] # /patterns
 
 #------------------------------------------
  # Repository
