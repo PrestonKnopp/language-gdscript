@@ -21,7 +21,7 @@ patterns: [
     name: "punctuation.definition.comment.gdscript"
   }
   {
-    match: "\\b(?i:elif|else|for|if|while|break|continue|pass|and|in|is|not|or|return|onready|breakpoint)\\b"
+    match: "\\b(?i:match|elif|else|for|if|while|break|continue|pass|and|in|is|not|or|return|onready|breakpoint)\\b"
     name: "keyword.control.gdscript"
   }
   {
