@@ -1,4 +1,4 @@
-fileTypes: [ "gd" ]
+fileTypes: [ "gd", "tscn" ]
 scopeName: "source.gdscript"
 name: "GDScript (Godot Engine)"
 patterns: [
