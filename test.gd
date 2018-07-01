@@ -68,6 +68,9 @@ func loops():
 
 master func mf():
 	print("Master")
+	
+remote func rf():
+	print("Remote")
 
 slave func sf():
 	print("Slave")

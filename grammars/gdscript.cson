@@ -110,7 +110,7 @@ patterns: [
 
   {
     # matches optionally static, master, sync, or slave method up to opening paran
-    begin: "^\\s*(static|master|sync|slave)?\\s*(func)\\s+([a-zA-Z_]\\w*)\s*(\\()"
+    begin: "^\\s*(static|master|remote|sync|slave)?\\s*(func)\\s+([a-zA-Z_]\\w*)\s*(\\()"
     beginCaptures:
       "1":
         name: "storage.modifier.static.gdscript"
