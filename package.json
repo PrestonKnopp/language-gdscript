@@ -7,7 +7,7 @@
     "gdscript",
     "godot"
   ],
-  "repository": "https://github.com/IndicaInkwell/language-gdscript.git",
+  "repository": "https://github.com/PrestonKnopp/language-gdscript.git",
   "license": "",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
