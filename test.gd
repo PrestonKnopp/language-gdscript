@@ -26,11 +26,19 @@ var avar = 100 setget onefunc,twofunc
 var bvar = 500 setget ,twofunc
 var cvar = 200 setget onefunc
 func onefunc(s="hello"):
+	""" Test Comment String """
+	"""
+	Another Comment String
+	Right Here
+	"""
 	avar = s
 func twofunc():
 	return avar
 
 onready var dict = {
+	"""
+	This comment string should be invalid.
+	"""
 	hello = "world",
 	"hello" : 1,
 	22 : Vector2("Hello")
@@ -68,7 +76,7 @@ func loops():
 
 master func mf():
 	print("Master")
-	
+
 remote func rf():
 	print("Remote")
 

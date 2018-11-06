@@ -7,10 +7,11 @@ patterns: [
   # Includes
 #------------------------------------------
 
-  { include: "#strings"    }
-  { include: "#numbers"    }
-  { include: "#const_vars" }
-  { include: "#self"       }
+  { include: "#strings"         }
+  { include: "#comment_strings" }
+  { include: "#numbers"         }
+  { include: "#const_vars"      }
+  { include: "#self"            }
 
 #------------------------------------------
   #  Matches
@@ -183,6 +184,14 @@ repository:
   const_vars:
     match: "\\b([A-Z_0-9]+)\\b"
     name: "constant.other.gdscript"
+  comment_strings:
+    patterns: [
+      {
+        begin: "^\\s*(\"\"\")"
+        end: "\"\"\""
+        name: "comment.block.gdscript"
+      }
+    ]
   strings:
     patterns: [
         {
