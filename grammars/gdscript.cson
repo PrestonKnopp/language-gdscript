@@ -42,7 +42,7 @@ patterns: [
     name: "keyword.operator.assignment.gdscript"
   }
   {
-    match: "\\b(?i:class|extends|assert|signal|setget)\\b"
+    match: "\\b(?i:extends|assert|signal|setget)\\b"
     name: "keyword.other.gdscript"
   }
   {
@@ -85,8 +85,18 @@ patterns: [
   {
     captures:
       "1":
+        name: "storage.type.class_name.gdscript"
+      "2":
+        name: "entity.name.type.class_name.gdscript"
+    match: "^(class_name)\\s+([a-zA-Z_]\\w*)"
+  }
+  {
+    captures:
+      "1":
+        name: "storage.type.class.gdscript"
+      "2":
         name: "entity.name.type.class.gdscript"
-    match: "(?<=^class)\\s+([a-zA-Z_]\\w*)\\s*(?=:)"
+    match: "^(class)\\s+([a-zA-Z_]\\w*)"
   }
   {
     captures:

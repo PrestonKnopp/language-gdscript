@@ -1,7 +1,6 @@
+tool
 extends Node
-
-if,for,elif,else,var,onready,export,breakpoint,break,continue,pass,return,class,extends,is,tool,self,yield
-func,static,const,match,enum,setget,
+class_name SomeClassName, "icon_path"
 
 signal hello_world
 signal with_params(one=1, two="hello")
