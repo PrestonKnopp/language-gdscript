@@ -85,6 +85,10 @@ slave func sf():
 sync func syf():
 	print("Sync")
 
+func escapes_in_str():
+	test = " \n hello \n \b\b\b\n \\ \'\\\"\? \?"
+	hello = 'hello \n okay that\'s okay. \\\\ \b \n \\\b\a\?'
+
 func do_some_match(v):
 	match v:
 		1,2,3,"sword":

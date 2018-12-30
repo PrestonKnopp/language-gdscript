@@ -188,6 +188,32 @@ patterns: [
 #------------------------------------------
 
 repository:
+  escapes:
+    # TODO: add hex, octal escapes
+    match: "(\\\\a)|(\\\\b)|(\\\\f)|(\\\\n)|(\\\\r)|(\\\\t)|(\\\\v)|(\\\\\\\\)|(\\\\')|(\\\\\")|(\\\\\\?)"
+    captures:
+      "1":
+        name: "constant.character.escape.alert.gdscript"
+      "2":
+        name: "constant.character.escape.backspace.gdscript"
+      "3":
+        name: "constant.character.escape.formfeed.gdscript"
+      "4":
+        name: "constant.character.escape.newline.gdscript"
+      "5":
+        name: "constant.character.escape.carriage-return.gdscript"
+      "6":
+        name: "constant.character.escape.tab.gdscript"
+      "7":
+        name: "constant.character.escape.vtab.gdscript"
+      "8":
+        name: "constant.character.escape.backslash.gdscript"
+      "9":
+        name: "constant.character.escape.single-quote.gdscript"
+      "10":
+        name: "constant.character.escape.double-quote.gdscript"
+      "11":
+        name: "constant.character.escape.question-mark.gdscript"
   self:
     match: "\\bself\\b"
     name: "variable.language.gdscript"
@@ -206,13 +232,19 @@ repository:
     patterns: [
         {
           begin: "\""
-          end: "(?<!\\\\)\""
+          end: "\""
           name: "string.quoted.double.gdscript"
+          patterns: [
+            { include: "#escapes"}
+          ]
         }
         {
           begin: "'"
-          end: "(?<!\\\\)'"
+          end: "'"
           name: "string.quoted.single.gdscript"
+          patterns: [
+            { include: "#escapes"}
+          ]
         }
     ]
   numbers:
