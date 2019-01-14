@@ -12,7 +12,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "/Users/PrestonKnopp/Repositories/tree-sitter-gdscript": "0.0.0"
+  },
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
