@@ -11,14 +11,17 @@ Converted from the sublime text grammar: https://github.com/beefsack/GDScript-su
 - Syntax highlighting
 - Autocompletion! (using autocomplete+). Will be obsolete! Check out: [atom-autocomplete-gdscript](https://atom.io/packages/autocomplete-gdscript) by [neikeq](https://github.com/neikeq/atom-autocomplete-gdscript)
 - Symbol generation with [goto](https://atom.io/packages/goto) package
+- tree-sitter-gdscript support
 
 ### Install
 
 - `apm install lang-gdscript`
+  - use lang-gdscript because there's another language-gdscript package
 - or from atom > settings > install
 
 ### TODOS
 
+- [DONE] implement tree-sitter-gdscript
 - [DONE] Fix Comments
 - [DONE] ~~Remove~~ Reduce Duplicates
 - [DONE] Reduce Precedence
