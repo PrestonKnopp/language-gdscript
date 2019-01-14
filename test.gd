@@ -1,11 +1,14 @@
 tool
-extends Node
+extends Class.SubClass
+extends "path/path".Class
 class_name SomeClassName, "icon_path"
 
 signal hello_world
-signal with_params(one=1, two="hello")
+signal with_params(one, two)
 
 const CONST_VAR = "Blah blah blah"
+const OTHER_CONST := "Hello"
+const LAST_CONST: Node = Node.new()
 
 enum Hello {
 	ONE, TWO = 5
@@ -16,11 +19,13 @@ enum {
 	ANON_TWO
 }
 
-class InnerClass extends Blah:
+class InnerClass extends "World".Hello.World:
 	var in_member = "Blah Blah"
 	func test():
 		pass
 
+var butt: Hello = "hello"
+var butt := "hello" setget set,get
 var avar = 100 setget onefunc,twofunc
 var bvar = 500 setget ,twofunc
 var cvar = 200 setget onefunc
@@ -33,6 +38,9 @@ func onefunc(s="hello"):
 	avar = s
 func twofunc():
 	return avar
+
+func typed(arg: Hello = Hello.WORLD) -> Hello:
+	return arg.hello.sin()
 
 onready var dict = {
 	"""
@@ -49,11 +57,14 @@ export(Vector2) var exported_member = Vector2(0.1, 0.335)
 func hello(to="world"):
 	print("Hello, ", to, "!")
 	print("Format %s" % "Specifier")
+	return hello as World2D
 
 static func hello():
 	pass
 
-func loops():
+func loops() -> Hello:
+	if hello and whatsup:
+		print('hello and whatsup')
 	for x in [5, 7, 11]:
 	    statement  # loop iterates 3 times with x as 5, then 7 and finally 11
 
@@ -79,10 +90,10 @@ master func mf():
 remote func rf():
 	print("Remote")
 
-slave func sf():
+puppetsync func sf():
 	print("Slave")
 
-sync func syf():
+puppet func syf():
 	print("Sync")
 
 func escapes_in_str():
@@ -97,6 +108,7 @@ func do_some_match(v):
 		Hello.ONE: print("v is one")
 		[var b, _, "hello"]: print("v is arr")
 		{"name" : "dennis", "age" : var age}: print("get age")
+		{"hello": "world", ..}: print("open ending dict")
 		1: print("v is 1")
 		var bind_v: print("bound v", bind_v)
 		_: print("v is anything")
