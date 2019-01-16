@@ -113,11 +113,15 @@ scopes:
   'setget > "setget"': 'keyword.other'
   'setget > setter, setget > getter': 'entity.name.function.setter.getter'
 
-  'type > identifier': 'entity.name.type.class'
-  'extends_statement > dotted_name > identifier': 'entity.name.type.class'
+  'type': 'entity.name.type.class'
+  'class_definition > name': 'entity.name.type.class'
+  'enum_definition > name': 'entity.name.type.enum'
 
-  'class_definition > identifier': 'entity.name.type.class'
-  'function_definition > identifier': 'entity.name.function'
+  'function_definition > name': 'entity.name.function'
+
+  'const_statement > name': 'entity.name.constant'
+  'class_name_statement > name': 'entity.name.type.class'
+  'signal_statement > name': 'entity.function.name.other'
 
   'attribute > identifier:nth-child(2)': [
       {
@@ -130,8 +134,6 @@ scopes:
       },
       'variable.other.object.property'
   ]
-
-  'signal_statement > identifier': 'entity.function.name.other'
 
   'call > attribute > identifier:nth-child(2)': 'entity.name.function'
   'call > identifier:nth-child(0)': [
