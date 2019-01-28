@@ -123,7 +123,19 @@ scopes:
   'class_name_statement > name': 'entity.name.type.class'
   'signal_statement > name': 'entity.function.name.other'
 
-  'attribute > identifier:nth-child(2)': [
+  # Don't highlight the first attribute to differentiate...
+  'attribute > identifier:nth-child(0)': [
+    {
+      match: '^[\$A-Z_]{2,}$',
+      scopes: 'constant.other'
+    },
+    {
+      match: '^[A-Z]',
+      scopes: 'meta.class'
+    },
+  ]
+  # from the sub attributes
+  'attribute > identifier': [
       {
         match: '^[\$A-Z_]{2,}$',
         scopes: 'constant.other'
@@ -135,7 +147,9 @@ scopes:
       'variable.other.object.property'
   ]
 
-  'call > attribute > identifier:nth-child(2)': 'entity.name.function'
+  'attribute_call > identifier': 'entity.name.function'
+  'attribute_subscript > identifier': 'variable.other.object.subscript'
+
   'call > identifier:nth-child(0)': [
     {match: '^(sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|sqrt|fmod|fposmod|floor|ceil|round|abs|sign|pow|log|exp|isnan|isinf|ease|decimals|stepify|lerp|dectime|randomize|randi|randf|rand_range|seed|rand_seed|deg2rad|rad2deg|linear2db|db2linear|max|min|clamp|nearest_po2|weakref|funcref|convert|typeof|str|print|printt|prints|printerr|printraw|var2str|str2var|var2bytes|bytes2var|range|load|inst2dict|dict2inst|hash|Color8|print_stack|instance_from_id|preload|yield|assert)$',
     scopes: 'support.function'},

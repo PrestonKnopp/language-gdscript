@@ -40,7 +40,7 @@ func twofunc():
 	return avar
 
 func typed(arg: Hello = Hello.WORLD) -> Hello:
-	return arg.hello.sin()
+	return arg.hello.world().what[1].okay()
 
 onready var dict = {
 	"""
