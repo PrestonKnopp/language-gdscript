@@ -1,18 +1,20 @@
 {
   "name": "lang-gdscript",
-  "version": "3.3.0",
+  "version": "3.7.0",
   "description": "GDScript (Godot Scripting Language) grammar and completions for atom.io.",
   "main": "./lib/main",
   "keywords": [
     "gdscript",
     "godot"
   ],
-  "repository": "https://github.com/IndicaInkwell/language-gdscript.git",
+  "repository": "https://github.com/PrestonKnopp/language-gdscript.git",
   "license": "",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tree-sitter-gdscript": "0.2.0"
+  },
   "providedServices": {
     "autocomplete.provider": {
       "versions": {

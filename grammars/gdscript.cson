@@ -1,4 +1,4 @@
-fileTypes: [ "gd" ]
+fileTypes: [ "gd", "tscn", "tres" ]
 scopeName: "source.gdscript"
 name: "GDScript (Godot Engine)"
 patterns: [
@@ -7,10 +7,11 @@ patterns: [
   # Includes
 #------------------------------------------
 
-  { include: "#strings"    }
-  { include: "#numbers"    }
-  { include: "#const_vars" }
-  { include: "#self"       }
+  { include: "#strings"         }
+  { include: "#comment_strings" }
+  { include: "#numbers"         }
+  { include: "#const_vars"      }
+  { include: "#self"            }
 
 #------------------------------------------
   #  Matches
@@ -41,7 +42,7 @@ patterns: [
     name: "keyword.operator.assignment.gdscript"
   }
   {
-    match: "\\b(?i:class|extends|assert|signal|setget)\\b"
+    match: "\\b(?i:extends|assert|signal|setget)\\b"
     name: "keyword.other.gdscript"
   }
   {
@@ -84,8 +85,18 @@ patterns: [
   {
     captures:
       "1":
+        name: "storage.type.class_name.gdscript"
+      "2":
+        name: "entity.name.type.class_name.gdscript"
+    match: "^(class_name)\\s+([a-zA-Z_]\\w*)"
+  }
+  {
+    captures:
+      "1":
+        name: "storage.type.class.gdscript"
+      "2":
         name: "entity.name.type.class.gdscript"
-    match: "(?<=^class)\\s+([a-zA-Z_]\\w*)\\s*(?=:)"
+    match: "^(class)\\s+([a-zA-Z_]\\w*)"
   }
   {
     captures:
@@ -177,23 +188,63 @@ patterns: [
 #------------------------------------------
 
 repository:
+  escapes:
+    # TODO: add hex, octal escapes
+    match: "(\\\\a)|(\\\\b)|(\\\\f)|(\\\\n)|(\\\\r)|(\\\\t)|(\\\\v)|(\\\\\\\\)|(\\\\')|(\\\\\")|(\\\\\\?)"
+    captures:
+      "1":
+        name: "constant.character.escape.alert.gdscript"
+      "2":
+        name: "constant.character.escape.backspace.gdscript"
+      "3":
+        name: "constant.character.escape.formfeed.gdscript"
+      "4":
+        name: "constant.character.escape.newline.gdscript"
+      "5":
+        name: "constant.character.escape.carriage-return.gdscript"
+      "6":
+        name: "constant.character.escape.tab.gdscript"
+      "7":
+        name: "constant.character.escape.vtab.gdscript"
+      "8":
+        name: "constant.character.escape.backslash.gdscript"
+      "9":
+        name: "constant.character.escape.single-quote.gdscript"
+      "10":
+        name: "constant.character.escape.double-quote.gdscript"
+      "11":
+        name: "constant.character.escape.question-mark.gdscript"
   self:
     match: "\\bself\\b"
     name: "variable.language.gdscript"
   const_vars:
     match: "\\b([A-Z_0-9]+)\\b"
     name: "constant.other.gdscript"
+  comment_strings:
+    patterns: [
+      {
+        begin: "^\\s*(\"\"\")"
+        end: "\"\"\""
+        name: "comment.block.gdscript"
+      }
+    ]
   strings:
     patterns: [
         {
           begin: "\""
-          end: "(?<!\\\\)\""
+          end: "\""
           name: "string.quoted.double.gdscript"
+          patterns: [
+            { include: "#escapes"}
+          ]
         }
         {
           begin: "'"
-          end: "(?<!\\\\)'"
+          end: "'"
           name: "string.quoted.single.gdscript"
+          patterns: [
+            { include: "#escapes"}
+          ]
         }
     ]
   numbers:
