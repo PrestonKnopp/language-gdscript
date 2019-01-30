@@ -7,162 +7,162 @@ firstLineRegex: [
 ]
 
 fileTypes: [
-  'gd'
+	'gd'
 ]
 
 folds: [
-  {
-    type: [
-      'if_statement'
-      'for_statement'
-      'try_statement'
-      'with_statement'
-      'while_statement'
-      'class_definition'
-      'function_definition'
-    ]
-    start: {type: ':'}
-  }
-  {
-    start: {type: '(', index: 0}
-    end: {type: ')', index: -1}
-  },
-  {
-    start: {type: '[', index: 0}
-    end: {type: ']', index: -1}
-  },
-  {
-    start: {type: '{', index: 0}
-    end: {type: '}', index: -1}
-  }
+	{
+		type: [
+			'if_statement'
+			'for_statement'
+			'try_statement'
+			'with_statement'
+			'while_statement'
+			'class_definition'
+			'function_definition'
+		]
+		start: {type: ':'}
+	}
+	{
+		start: {type: '(', index: 0}
+		end: {type: ')', index: -1}
+	},
+	{
+		start: {type: '[', index: 0}
+		end: {type: ']', index: -1}
+	},
+	{
+		start: {type: '{', index: 0}
+		end: {type: '}', index: -1}
+	}
 ]
 
 comments:
-  start: '# '
+	start: '# '
 
 scopes:
-  'source': 'source.gdscript'
+	'source': 'source.gdscript'
 
-  'comment': 'comment.line'
+	'comment': 'comment.line'
 
-  'null': 'constant.language.null'
-  'true': 'constant.language.boolean.true'
-  'false': 'constant.language.boolean.false'
-  'integer': 'constant.language.numeric.integer'
-  'float': 'constant.language.numeric.float'
-  'string': 'string.quoted'
-  'escape_sequence': 'constant.character.escape'
+	'null': 'constant.language.null'
+	'true': 'constant.language.boolean.true'
+	'false': 'constant.language.boolean.false'
+	'integer': 'constant.language.numeric.integer'
+	'float': 'constant.language.numeric.float'
+	'string': 'string.quoted'
+	'escape_sequence': 'constant.character.escape'
 
-  '"+"': 'keyword.operator'
-  '"-"': 'keyword.operator'
-  '"*"': 'keyword.operator'
-  '"/"': 'keyword.operator'
-  '"%"': 'keyword.operator'
-  '"=="': 'keyword.operator'
-  '"!="': 'keyword.operator'
-  '">"': 'keyword.operator'
-  '"<"': 'keyword.operator'
-  '">="': 'keyword.operator'
-  '"<="': 'keyword.operator'
-  '"="': 'keyword.operator'
-  '"+="': 'keyword.operator'
-  '"-="': 'keyword.operator'
-  '"*="': 'keyword.operator'
-  '"/="': 'keyword.operator'
-  '"%="': 'keyword.operator'
-  '"&"': 'keyword.operator'
-  '"|"': 'keyword.operator'
-  '"^"': 'keyword.operator'
-  '"~"': 'keyword.operator'
-  '"<<"': 'keyword.operator'
-  '">>"': 'keyword.operator'
+	'"+"': 'keyword.operator'
+	'"-"': 'keyword.operator'
+	'"*"': 'keyword.operator'
+	'"/"': 'keyword.operator'
+	'"%"': 'keyword.operator'
+	'"=="': 'keyword.operator'
+	'"!="': 'keyword.operator'
+	'">"': 'keyword.operator'
+	'"<"': 'keyword.operator'
+	'">="': 'keyword.operator'
+	'"<="': 'keyword.operator'
+	'"="': 'keyword.operator'
+	'"+="': 'keyword.operator'
+	'"-="': 'keyword.operator'
+	'"*="': 'keyword.operator'
+	'"/="': 'keyword.operator'
+	'"%="': 'keyword.operator'
+	'"&"': 'keyword.operator'
+	'"|"': 'keyword.operator'
+	'"^"': 'keyword.operator'
+	'"~"': 'keyword.operator'
+	'"<<"': 'keyword.operator'
+	'">>"': 'keyword.operator'
 
-  '"and"': 'keyword.logical'
-  '"or"': 'keyword.logical'
-  '"not"': 'keyword.logical'
+	'"and"': 'keyword.logical'
+	'"or"': 'keyword.logical'
+	'"not"': 'keyword.logical'
 
-  '"in"': 'keyword.in'
-  '"is"': 'keyword.is'
-  '"as"': 'keyword.as'
+	'"in"': 'keyword.in'
+	'"is"': 'keyword.is'
+	'"as"': 'keyword.as'
 
-  '"if"': 'keyword.control'
-  '"else"': 'keyword.control'
-  '"elif"': 'keyword.control'
-  '"while"': 'keyword.control'
-  '"for"': 'keyword.control'
-  '"return"': 'keyword.control'
-  '"break"': 'keyword.control'
-  '"continue"': 'keyword.control'
-  '"pass"': 'keyword.control'
-  '"match"': 'keyword.control'
+	'"if"': 'keyword.control'
+	'"else"': 'keyword.control'
+	'"elif"': 'keyword.control'
+	'"while"': 'keyword.control'
+	'"for"': 'keyword.control'
+	'"return"': 'keyword.control'
+	'"break"': 'keyword.control'
+	'"continue"': 'keyword.control'
+	'"pass"': 'keyword.control'
+	'"match"': 'keyword.control'
 
-  '"class"': 'storage.type.class'
-  '"class_name"': 'storage.type.class_name'
-  '"func"': 'storage.type.function'
-  '"enum"': 'storage.type.enum'
-  '"signal"': 'storage.type.signal'
-  '"var"': 'storage.type.variable'
-  '"onready"': 'storage.modifier.variable'
-  '"export"': 'storage.modifier.variable'
-  '"extends"': 'storage.modifier'
-  '"const"': 'storage.modifier'
-  'tool_statement': 'storage.modifier'
-  'static_keyword': 'storage.modifier'
-  'remote_keyword': 'storage.modifier.remote_keyword'
+	'"class"': 'storage.type.class'
+	'"class_name"': 'storage.type.class_name'
+	'"func"': 'storage.type.function'
+	'"enum"': 'storage.type.enum'
+	'"signal"': 'storage.type.signal'
+	'"var"': 'storage.type.variable'
+	'"onready"': 'storage.modifier.variable'
+	'"export"': 'storage.modifier.variable'
+	'"extends"': 'storage.modifier'
+	'"const"': 'storage.modifier'
+	'tool_statement': 'storage.modifier'
+	'static_keyword': 'storage.modifier'
+	'remote_keyword': 'storage.modifier.remote_keyword'
 
-  'setget > "setget"': 'keyword.other'
-  'setget > setter, setget > getter': 'entity.name.function.setter.getter'
+	'setget > "setget"': 'keyword.other'
+	'setget > setter, setget > getter': 'entity.name.function.setter.getter'
 
-  'type': 'entity.name.type.class'
-  'class_definition > name': 'entity.name.type.class'
-  'enum_definition > name': 'entity.name.type.enum'
+	'type': 'entity.name.type.class'
+	'class_definition > name': 'entity.name.type.class'
+	'enum_definition > name': 'entity.name.type.enum'
 
-  'function_definition > name': 'entity.name.function'
+	'function_definition > name': 'entity.name.function'
 
-  'const_statement > name': 'entity.name.constant'
-  'class_name_statement > name': 'entity.name.type.class'
-  'signal_statement > name': 'entity.function.name.other'
+	'const_statement > name': 'entity.name.constant'
+	'class_name_statement > name': 'entity.name.type.class'
+	'signal_statement > name': 'entity.function.name.other'
 
-  # Don't highlight the first attribute to differentiate...
-  'attribute > identifier:nth-child(0)': [
-    {
-      match: '^[\$A-Z_]{2,}$',
-      scopes: 'constant.other'
-    },
-    {
-      match: '^[A-Z]',
-      scopes: 'meta.class'
-    },
-  ]
-  # from the sub attributes
-  'attribute > identifier': [
-      {
-        match: '^[\$A-Z_]{2,}$',
-        scopes: 'constant.other'
-      },
-      {
-        match: '^[A-Z]',
-        scopes: 'meta.class'
-      },
-      'variable.other.object.property'
-  ]
+	# Don't highlight the first attribute to differentiate...
+	'attribute > identifier:nth-child(0)': [
+		{
+			match: '^[\$A-Z_]{2,}$',
+			scopes: 'constant.other'
+		},
+		{
+			match: '^[A-Z]',
+			scopes: 'meta.class'
+		},
+	]
+	# from the sub attributes
+	'attribute > identifier': [
+			{
+				match: '^[\$A-Z_]{2,}$',
+				scopes: 'constant.other'
+			},
+			{
+				match: '^[A-Z]',
+				scopes: 'meta.class'
+			},
+			'variable.other.object.property'
+	]
 
-  'attribute_call > identifier': 'entity.name.function'
-  'attribute_subscript > identifier': 'variable.other.object.subscript'
+	'attribute_call > identifier': 'entity.name.function'
+	'attribute_subscript > identifier': 'variable.other.object.subscript'
 
-  'call > identifier:nth-child(0)': [
-    {match: '^(sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|sqrt|fmod|fposmod|floor|ceil|round|abs|sign|pow|log|exp|isnan|isinf|ease|decimals|stepify|lerp|dectime|randomize|randi|randf|rand_range|seed|rand_seed|deg2rad|rad2deg|linear2db|db2linear|max|min|clamp|nearest_po2|weakref|funcref|convert|typeof|str|print|printt|prints|printerr|printraw|var2str|str2var|var2bytes|bytes2var|range|load|inst2dict|dict2inst|hash|Color8|print_stack|instance_from_id|preload|yield|assert)$',
-    scopes: 'support.function'},
-    'entity.name.function'
-   ]
+	'call > identifier:nth-child(0)': [
+		{match: '^(sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|sqrt|fmod|fposmod|floor|ceil|round|abs|sign|pow|log|exp|isnan|isinf|ease|decimals|stepify|lerp|dectime|randomize|randi|randf|rand_range|seed|rand_seed|deg2rad|rad2deg|linear2db|db2linear|max|min|clamp|nearest_po2|weakref|funcref|convert|typeof|str|print|printt|prints|printerr|printraw|var2str|str2var|var2bytes|bytes2var|range|load|inst2dict|dict2inst|hash|Color8|print_stack|instance_from_id|preload|yield|assert)$',
+		scopes: 'support.function'},
+		'entity.name.function'
+	 ]
 
-  'identifier': [
-    {
-      match: '^[\$A-Z_]{2,}$',
-      scopes: 'constant.other'
-    },
-    {
-      match: '^[A-Z]',
-      scopes: 'meta.class'
-    },
-  ]
+	'identifier': [
+		{
+			match: '^[\$A-Z_]{2,}$',
+			scopes: 'constant.other'
+		},
+		{
+			match: '^[A-Z]',
+			scopes: 'meta.class'
+		},
+	]

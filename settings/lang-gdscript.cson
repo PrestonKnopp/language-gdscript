@@ -1,4 +1,4 @@
 '.source.gdscript':
-    'editor':
-        'commentStart': '# '
-        'increaseIndentPattern': ':\\W*$'
+	'editor':
+		'commentStart': '# '
+		'increaseIndentPattern': ':\\W*$'
