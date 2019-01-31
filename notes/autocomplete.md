@@ -28,43 +28,6 @@ There should be a series of persistent scopes made up of:
   - The buffer should walk backwards getting all accessible symbols and pushing scopes appropriately
   - Temporaries should be cleared on buffer update
 
-
-    interface Lookupable<T> {
-        lookup(term: string) -> T?
-        find(term: string) -> Array<T>
-    }
-
-    class Symbol implements Lookupable<Symbol> {
-        type: string    // type, method, constant, class, etc.
-        text: string    // the symbol text like `Vector2`
-        info: structure // a type structure
-    }
-
-    class Scope implements Lookupable<Symbol> {
-        add(symbol: Symbol)
-        remove(symbol: Symbol)
-        lookup(symbol: string) -> Symbol?
-        find(term: string) -> Array<Symbol>?
-    }
-
-    class Index implements Lookupable<Symbol> {
-        protected chain: Array<Scope>
-        makePersistentScope(named: string) -> Scope
-        makeTemporaryScope(scope: object, named: string?) -> Scope
-        clearTemporaryScopes()
-        getScope(named) -> Scope
-
-        // Direct lookup
-        lookup(symbol: string) -> Symbol?
-        lookupInScope(scopeName, symbol: string) -> Symbol?
-        lookupFromScope(scopeName, symbol: string) -> Symbol?
-
-        // Fuzzy lookup
-        find(term: string) -> Array<Symbol>
-        findInScope(scopeName, term: string) -> Array<Symbol>
-        findFromScope(scopeName, symbol: string) -> Array<Symbol>
-    }
-
 ### Keeping the Index Up to Date
 
 Use `Atom::File` api to subscribe to change, rename, and delete events to indexed scripts.
