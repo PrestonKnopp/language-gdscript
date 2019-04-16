@@ -11,6 +11,10 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 - Basic symbol lookup with Atom's builtin symbol viewer
 - Supports typed GDScript
 
+### Dependencies
+
+- **Python2** must be installed for node-gyp to build tree-sitter-gdscript
+
 ### Install
 
 - `apm install lang-gdscript`
