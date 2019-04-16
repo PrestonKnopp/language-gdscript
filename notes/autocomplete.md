@@ -1,5 +1,17 @@
 # Basic Autocompletion using TreeSitter
 
+## Features
+
+- Attribute '.' completion
+- Function overrides
+- Scene node names
+- Class name resolution
+- Type resolution
+- Type completions
+- Dictionary subscript
+- Autoload singletons
+- Signals and funcs for Object.[dis]connect()
+
 ## Godot Project
 
 The atom project root is used as the Godot project root aka `res://`. This means that you can edit GDScript without having a `godot.project` file. However, symbols for `class_name` and `autoload` will not be accessible.
