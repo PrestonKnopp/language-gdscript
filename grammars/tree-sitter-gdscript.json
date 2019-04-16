@@ -59,6 +59,7 @@
   "scopes": {
     "source": "source.gdscript",
     "comment": "comment.line",
+    "expression_statement > string:nth-child(0)": "comment.block",
     "null": "constant.language.null",
     "true": "constant.language.boolean.true",
     "false": "constant.language.boolean.false",
