@@ -13,7 +13,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-gdscript": "0.2.1"
+    "tree-sitter-gdscript": "^0.2.3"
   },
   "providedServices": {
     "autocomplete.provider": {
