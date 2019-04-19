@@ -7,7 +7,15 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 ### Features
 
 - Syntax highlighting via tree-sitter-gdscript
-- Basic identifier based autocompletion support
+- Autocomplete
+  - Attributes, e.g. `my_node.get_node('other_node').name`
+  - Function call snippets
+  - Function overrides, e.g. `func _unhandled_key_input(event)`
+    - after typing `func <cursor here>`
+  - Types e.g.
+    - `var node: <cursor here>`
+    - `func hello(param: <cursor here>) -> <and cursor here>:`
+    - `extends <cursor here>`
 - Basic symbol lookup with Atom's builtin symbol viewer
 - Supports typed GDScript
 
