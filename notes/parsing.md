@@ -16,10 +16,14 @@ Last thing to do is to create the language mode with `Atom::GrammarRegistry::lan
 
 Then the `languageMode.tree` will be ready for use.
 
-## godot.project
+## godot.project, tscn, tres
 
-Scan for a line that begins with `_global_script_classes` then scan until end the array of class objects. Then load as json. This isn't great but it'll work.
+Use [tree-sitter-godot-resource](https://github.com/PrestonKnopp/tree-sitter-godot-resource) to parse.
 
-## tscn
+### godot.project
 
-TODO: scenes
+Get global property node that has path: `_global_script_classes`. Get it's associated array node and iterate through it's dictionary nodes. Check if a dictionary pair node contains `"language": "GDScript"` then parse the file pointed to in pair node `"path": "file/path"`. Index the referenced script by both file path and `"class": "ClassName"`.
+
+### tscn
+
+Parse tscn for suggesting `get_node()` paths and using the tscn node entry to find the type of the node returned by `get_node()`. Skip finding node type if the call is a typed statement or expression e.g. `var node: Control = get_node('my/path')` or `get_node('my/path') as Control`.
