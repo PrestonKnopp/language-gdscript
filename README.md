@@ -6,8 +6,10 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 ### Features
 
-- Syntax highlighting via tree-sitter-gdscript
-- Autocomplete
+- Syntax highlighting for gd, tres, tscn, and project.godot files.
+- Autocomplete for GDScript
+  - Autoloaded scripts
+  - Scripts with `class_name`'s
   - Attributes, e.g. `my_node.get_node('other_node').name`
   - Function call snippets
   - Function overrides, e.g. `func _unhandled_key_input(event)`
@@ -21,7 +23,7 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 ### Dependencies
 
-- **Python2** is needed for node-gyp to build tree-sitter-gdscript.
+- **Python2** is needed for node-gyp to build [tree-sitter-gdscript](https://github.com/PrestonKnopp/tree-sitter-gdscript) and [tree-sitter-godot-resource](https://github.com/PrestonKnopp/tree-sitter-godot-resource).
   - **macOS**: comes bundled with python2, so you don't have to worry mac users.
   - **Windows**: You may not have to worry. I have prebuilt Windows binaries that language-gdscript will attempt to download. If it fails then it will fallback to trying to build manually and you'll need to have [python2 installed](https://docs.python-guide.org/starting/install/win/).
   - **Linux**: If you use Linux, then you probably know more about this than I do. If needed, here is a guide on [installing python2 for Linux](https://docs.python-guide.org/starting/install/linux/).
