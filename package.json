@@ -12,7 +12,7 @@
   "repository": "https://github.com/PrestonKnopp/language-gdscript.git",
   "license": "",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.36.0 <2.0.0"
   },
   "dependencies": {
     "tree-sitter-godot-resource": "^0.0.0",
