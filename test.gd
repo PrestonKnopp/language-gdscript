@@ -11,7 +11,9 @@ const OTHER_CONST := "Hello"
 const LAST_CONST: Node = Node.new()
 
 enum Hello {
-	ONE, TWO = 5
+	ONE, TWO = 5,
+	One_1 = 1,
+	TWO_2 = 2
 }
 
 enum {

@@ -156,7 +156,7 @@ scopes:
     scopes: 'support.function'},
     'entity.name.function'
    ]
-
+  'enumerator > identifier:nth-child(0)': 'constant.enum'
   'identifier': [
     {
       match: '^[\$A-Z_]{2,}$',
