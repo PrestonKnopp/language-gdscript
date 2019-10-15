@@ -8,6 +8,7 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 - Syntax highlighting for gd, tres, tscn, and project.godot files.
 - Autocomplete for GDScript provided by Godot (v3.2+)
+- [atom-ide-ui](https://github.com/facebookarchive/atom-ide-ui) integration
 
 ### Dependencies
 
@@ -23,6 +24,10 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 - or from atom > settings > install
   - search `lang-gdscript`
 
+Optionally install `atom-ide-ui` for an IDE like experience:
+
+- `apm install atom-ide-ui`
+
 ### Usage
 
 - Connecting to Godot's Language Server
@@ -30,7 +35,7 @@ GDScript (Godot Scripting Language) grammar for atom.io.
   - The editor will automatically try connecting when opening a gdscript project.
   - You can try reconnecting at any time by:
     - Going to Packages > Lang GDScript > Reconnect to Godot Editor Language Server
-    - Going to command palette and searching GDScript or Reconnect...
+    - Going to command palette and searching GDScript or Reconnect
 
 ### Q&A
 
