@@ -1,24 +1,81 @@
 {
   "name": "lang-gdscript",
-  "version": "4.1.2",
+  "version": "4.2.0",
   "description": "GDScript (Godot Scripting Language) grammar and completions for atom.io.",
   "main": "./lib/main",
   "keywords": [
+    "tscn",
+    "tres",
     "gdscript",
     "godot"
   ],
   "repository": "https://github.com/PrestonKnopp/language-gdscript.git",
   "license": "",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.36.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-gdscript": "^0.2.3"
+    "atom-languageclient": "0.9.9",
+    "tree-sitter-gdscript": "^0.2.5",
+    "tree-sitter-godot-resource": "^0.1.0",
+    "ws": "^7.1.2"
   },
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
-        "2.0.0": "getProvider"
+        "2.0.0": "provideAutocomplete"
+      }
+    },
+    "definitions": {
+      "versions": {
+        "0.1.0": "provideDefinitions"
+      }
+    },
+    "outline-view": {
+      "versions": {
+        "0.1.0": "provideOutlines"
+      }
+    },
+    "find-references": {
+      "versions": {
+        "0.1.0": "provideFindReferences"
+      }
+    },
+    "code-actions": {
+      "versions": {
+        "0.1.0": "provideCodeActions"
+      }
+    },
+    "code-highlight": {
+      "versions": {
+        "0.1.0": "provideCodeHighlight"
+      }
+    }
+  },
+  "consumedServices": {
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatip"
+      }
+    },
+    "linter-indie": {
+      "versions": {
+        "2.0.0": "consumeLinterV2"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "consumeSignatureHelp"
+      }
+    },
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeBusySignal"
+      }
+    },
+    "console": {
+      "versions": {
+        "0.1.0": "consumeConsole"
       }
     }
   }

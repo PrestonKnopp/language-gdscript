@@ -88,6 +88,9 @@ func loops() -> Hello:
 
 master func mf():
 	print("Master")
+	
+remote func rf():
+	print("Remote")
 
 remote func rf():
 	print("Remote")

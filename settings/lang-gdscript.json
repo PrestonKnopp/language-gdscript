@@ -1,0 +1,8 @@
+{
+  ".source.gdscript": {
+    "editor": {
+      "commentStart": "# ",
+      "increaseIndentPattern": ":\\W*$"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "godotResource",
+  "scopeName": "source.godotResource",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-godot-resource",
+  "firstLineRegex": [],
+  "fileTypes": [
+    "tres", "tscn", "godot"
+  ],
+  "folds": [
+    {
+      "type": [
+        "property",
+        "section"
+      ]
+    },
+    {
+      "start": {
+        "type": "(",
+        "index": 0
+      },
+      "end": {
+        "type": ")",
+        "index": -1
+      }
+    },
+    {
+      "start": {
+        "type": "[",
+        "index": 0
+      },
+      "end": {
+        "type": "]",
+        "index": -1
+      }
+    },
+    {
+      "start": {
+        "type": "{",
+        "index": 0
+      },
+      "end": {
+        "type": "}",
+        "index": -1
+      }
+    }
+  ],
+  "comments": {
+    "start": "; "
+  },
+  "scopes": {
+    "resource": "source.godotResource",
+    "comment": "comment.line",
+    "null": "constant.language.null",
+    "true": "constant.language.boolean.true",
+    "false": "constant.language.boolean.false",
+    "integer": "constant.language.numeric.integer",
+    "float": "constant.language.numeric.float",
+    "string": "string.quoted",
+    "section > identifier": "meta.class",
+    "attribute > identifier": "variable.object",
+    "identifier": [
+      {
+        "match": "^[$A-Z_]{2,}$",
+        "scopes": "constant.other"
+      },
+      {
+        "match": "^[A-Z]",
+        "scopes": "meta.class"
+      }
+    ]
+  }
+}
