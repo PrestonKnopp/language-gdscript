@@ -42,3 +42,6 @@ Optionally install `atom-ide-ui` for an IDE like experience:
 - I just want syntax highlighting and tree sitter isn't working, what can I do?
   - Make sure Atom is up to date and try re-installing. Otherwise:
   - The legacy text-mate grammar is still included. You can select the non-tree-sitter grammar which is called `GDScript (Godot Engine)`.
+
+- How come datatips and hyperclicking doesn't work on engine types?
+  - This is not supported at the time.
