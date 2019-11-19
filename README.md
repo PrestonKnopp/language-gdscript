@@ -6,10 +6,16 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 ### Features
 
-- Syntax highlighting via tree-sitter-gdscript
-- Basic identifier based autocompletion support
-- Basic symbol lookup with Atom's builtin symbol viewer
-- Supports typed GDScript
+- Syntax highlighting for gd, tres, tscn, and project.godot files.
+- Autocomplete for GDScript provided by Godot (v3.2+)
+- [atom-ide-ui](https://github.com/facebookarchive/atom-ide-ui) integration
+
+### Dependencies
+
+- **Python2** is needed for node-gyp to build [tree-sitter-gdscript](https://github.com/PrestonKnopp/tree-sitter-gdscript) and [tree-sitter-godot-resource](https://github.com/PrestonKnopp/tree-sitter-godot-resource).
+  - **macOS**: comes bundled with python2, so you don't have to worry mac users.
+  - **Windows**: You may not have to worry. I have prebuilt Windows binaries that language-gdscript will attempt to download. If it fails then it will fallback to trying to build manually and you'll need to have [python2 installed](https://docs.python-guide.org/starting/install/win/).
+  - **Linux**: Here is a guide on [installing python2 for Linux](https://docs.python-guide.org/starting/install/linux/).
 
 ### Dependencies
 
@@ -24,3 +30,25 @@ GDScript (Godot Scripting Language) grammar for atom.io.
   - use lang-gdscript because there's another language-gdscript package
 - or from atom > settings > install
   - search `lang-gdscript`
+
+Optionally install `atom-ide-ui` for an IDE like experience:
+
+- `apm install atom-ide-ui`
+
+### Usage
+
+- Connecting to Godot's Language Server
+  - The Godot Editor must be open to connect.
+  - The editor will automatically try connecting when opening a gdscript project.
+  - You can try reconnecting at any time by:
+    - Going to Packages > Lang GDScript > Reconnect to Godot Editor Language Server
+    - Going to command palette and searching GDScript or Reconnect
+
+### Q&A
+
+- I just want syntax highlighting and tree sitter isn't working, what can I do?
+  - Make sure Atom is up to date and try re-installing. Otherwise:
+  - The legacy text-mate grammar is still included. You can select the non-tree-sitter grammar which is called `GDScript (Godot Engine)`.
+
+- How come datatips and hyperclicking doesn't work on engine types?
+  - This is not supported at the time.
