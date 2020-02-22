@@ -1,6 +1,6 @@
 # lang-gdscript package
 
-![](https://raw.githubusercontent.com/IndicaInkwell/language-gdscript/master/lang-gdscript-demo.png)
+![](https://raw.githubusercontent.com/PrestonKnopp/language-gdscript/master/lang-gdscript-demo.png)
 
 GDScript (Godot Scripting Language) grammar for atom.io.
 
@@ -23,6 +23,8 @@ GDScript (Godot Scripting Language) grammar for atom.io.
   - use lang-gdscript because there's another language-gdscript package
 - or from atom > settings > install
   - search `lang-gdscript`
+- or clone this repository
+  - from project root run `apm install` then `apm link`
 
 Optionally install `atom-ide-ui` for an IDE like experience:
 
@@ -32,10 +34,10 @@ Optionally install `atom-ide-ui` for an IDE like experience:
 
 - Connecting to Godot's Language Server
   - The Godot Editor must be open to connect.
-  - The editor will automatically try connecting when opening a gdscript project.
+  - The editor will automatically try connecting when opening a GDScript file.
   - You can try reconnecting at any time by:
     - Going to Packages > Lang GDScript > Reconnect to Godot Editor Language Server
-    - Going to command palette and searching GDScript or Reconnect
+    - Going to command palette and searching GDScript or Connect
 
 ### Q&A
 
