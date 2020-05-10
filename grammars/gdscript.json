@@ -5,7 +5,7 @@
     "tres"
   ],
   "scopeName": "source.gdscript",
-  "name": "GDScript (Godot Engine)",
+  "name": "GDScript (Legacy Textmate Grammar)",
   "patterns": [
     {
       "include": "#strings"
