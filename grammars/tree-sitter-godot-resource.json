@@ -1,5 +1,5 @@
 {
-  "name": "godotResource",
+  "name": "Godot Resource",
   "scopeName": "source.godotResource",
   "type": "tree-sitter",
   "parser": "tree-sitter-godot-resource",
