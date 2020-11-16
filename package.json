@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "atom-languageclient": "0.9.9",
-    "tree-sitter-gdscript": "^1.0.0",
-    "tree-sitter-godot-resource": "^0.1.0",
-    "ws": "^7.2.5"
+    "tree-sitter-gdscript": "^1.1.0",
+    "tree-sitter-godot-resource": "^0.2.1",
+    "ws": "^7.4.0"
   },
   "providedServices": {
     "autocomplete.provider": {
