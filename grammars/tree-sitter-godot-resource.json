@@ -3,7 +3,6 @@
   "scopeName": "source.godotResource",
   "type": "tree-sitter",
   "parser": "tree-sitter-godot-resource",
-  "firstLineRegex": [],
   "fileTypes": [
     "tres", "tscn", "godot"
   ],

@@ -3,7 +3,6 @@
   "scopeName": "source.gdscript",
   "type": "tree-sitter",
   "parser": "tree-sitter-gdscript",
-  "firstLineRegex": [],
   "fileTypes": [
     "gd"
   ],
