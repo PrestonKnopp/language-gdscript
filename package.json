@@ -3,7 +3,9 @@
   "version": "6.1.0",
   "description": "GDScript (Godot Scripting Language) grammar and completions for atom.io.",
   "main": "./lib/main",
-  "activationHooks": ["lang-gdscript:grammar-used"],
+  "activationHooks": [
+    "lang-gdscript:grammar-used"
+  ],
   "keywords": [
     "tscn",
     "tres",
@@ -16,7 +18,7 @@
     "atom": ">=1.36.0 <2.0.0"
   },
   "dependencies": {
-    "atom-languageclient": "0.9.9",
+    "atom-languageclient": "^1.0.7",
     "tree-sitter-gdscript": "^1.1.0",
     "tree-sitter-godot-resource": "^0.2.1",
     "ws": "^7.4.0"
