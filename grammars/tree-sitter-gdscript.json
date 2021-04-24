@@ -121,6 +121,7 @@
     "setget > \"setget\"": "keyword.other",
     "setget > setter, setget > getter": "entity.name.function.setter.getter",
     "type": "entity.name.type.class",
+    "inferred_type": "keyword.operator",
     "class_definition > name": "entity.name.type.class",
     "enum_definition > name": "entity.name.type.enum",
     "function_definition > name": "entity.name.function",

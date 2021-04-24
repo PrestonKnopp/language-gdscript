@@ -64,3 +64,4 @@ Make sure Atom is up to date and try re-installing. Otherwise, the legacy text-m
 - Added an opt-out setting for the client called `enableGodotLanguageServerClient`
 - Fixed errors when closing gdscript file and closing the last gdscript file
 - Updated atom-languageclient to v1.0.7
+- Added `inferred_type` highlight scope
