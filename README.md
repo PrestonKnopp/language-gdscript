@@ -36,7 +36,6 @@ Optionally install `atom-ide-ui` for an IDE like experience:
 - Connecting to Godot's Language Server
   - The Godot Editor must be open to connect.
   - The editor will automatically try connecting when opening a GDScript file.
-  - It will fallback to a basic completion provider when not available.
 
 - Show GDScript Language Client's status via
   - Packages > Lang GDScript > Show Language Client Status or
