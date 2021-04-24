@@ -8,15 +8,14 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 
 - Syntax highlighting for gd, tres, tscn, and project.godot files.
 - Autocomplete for GDScript provided by Godot (v3.2+)
-- [atom-ide-ui](https://github.com/facebookarchive/atom-ide-ui) integration
+- [atom-ide-base](https://github.com/atom-community/atom-ide-base) integration
   - Adds datatips, diagnostics, and hyperclicking support.
 
 ### Dependencies
 
-- **Python2** is needed for node-gyp to build [tree-sitter-gdscript](https://github.com/PrestonKnopp/tree-sitter-gdscript) and [tree-sitter-godot-resource](https://github.com/PrestonKnopp/tree-sitter-godot-resource).
-  - **macOS**: comes bundled with python2, so you don't have to worry mac users.
-  - **Windows**: You may not have to worry. I have prebuilt Windows binaries that language-gdscript will attempt to download. If it fails then it will fallback to trying to build manually and you'll need to have [python2 installed](https://docs.python-guide.org/starting/install/win/).
-  - **Linux**: Here is a guide on [installing python2 for Linux](https://docs.python-guide.org/starting/install/linux/).
+Pre-built binaries for [tree-sitter-gdscript](https://github.com/PrestonKnopp/tree-sitter-gdscript) and [tree-sitter-godot-resource](https://github.com/PrestonKnopp/tree-sitter-godot-resource) are available for Linux (64 bit), macOS (64 bit), and Windows (32 & 64 bit).
+
+- **Python2** is needed only when there are no pre-built binaries that match atom or your platform.
 
 ### Install
 
@@ -27,35 +26,42 @@ GDScript (Godot Scripting Language) grammar for atom.io.
 - or clone this repository
   - from project root run `apm install` then `apm link`
 
-Optionally install `atom-ide-ui` for an IDE like experience:
+Optionally install `atom-ide-base` for an IDE like experience:
 
-- `apm install atom-ide-ui`
+- `apm install atom-ide-base`
 
 ### Usage
 
 - Connecting to Godot's Language Server
   - The Godot Editor must be open to connect.
   - The editor will automatically try connecting when opening a GDScript file.
-  - It will fallback to a basic completion provider when not available.
 
 - Show GDScript Language Client's status via
   - Packages > Lang GDScript > Show Language Client Status or
-  - Searching in the command pallete for Show Language Client Status
+  - Searching in the command palette for Show Language Client Status
 
 ### Q&A
 
-- I just want syntax highlighting and tree sitter isn't working, what can I do?
-  - Make sure Atom is up to date and try re-installing. Otherwise:
-  - The legacy text-mate grammar is still included. You can select the non-tree-sitter grammar which is called `GDScript (Legacy Textmate Grammar)`.
+> I would like syntax highlighting and tree sitter isn't working, what can I do?
 
-- How come I'm not getting completion results, diagnostics, errors, etc?
+Make sure Atom is up to date and try re-installing. Otherwise, the legacy text-mate grammar is still included. You can select the non-tree-sitter grammar which is called `GDScript (Legacy Textmate Grammar)`.
 
-First, make sure at least `atom-ide-ui` or the atom-community-ide packages are installed.
+> How come I'm not getting completion results, diagnostics, errors, etc?
 
-Second, make sure the Godot Editor (v3.2+) is open.
+1. Make sure the relevant `atom-ide-*` package is installed or `atom-ide-base` which installs all of the atom ide packages.
+2. Open the Godot Editor (v3.2+).
+3. Check that the lang-gdscript's server port setting matches the Godot Editor's language server port.
+4. Try opening a gdscript file. lang-gdscript will attempt to connect when a new gdscript file is opened.
 
-Third, make sure the lang-gdscript's server port setting matches the Godot Editor's
-language server port.
+## Changelog
 
-Lastly, try opening a gdscript file. lang-gdscript will attempt to connect when a
-new gdscript file is opened.
+### v6.2.0
+
+- Fixed grammar applying to and causing the linter to lint unrelated files
+- Removed basic-completion-provider and old documentation data that bloated the package size.
+- Fixed client sockets not closing
+- Added a package activationHook. Now the package only activates when a gdscript grammar is used. This reduces startup time to 0ms.
+- Added an opt-out setting for the client called `enableGodotLanguageServerClient`
+- Fixed errors when closing gdscript file and closing the last gdscript file
+- Updated atom-languageclient to v1.0.7
+- Added `inferred_type` highlight scope
